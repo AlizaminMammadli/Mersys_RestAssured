@@ -33,11 +33,10 @@ public class Setup {
                         .post("/auth/login")
 
                         .then()
-                        .log().all()
                         .statusCode(200)
                         .extract().response().detailedCookies();
         ;
-        System.out.println("cookies = " + cookies);
+
 
         reqSpec = new RequestSpecBuilder()
                 .setContentType(ContentType.JSON)
